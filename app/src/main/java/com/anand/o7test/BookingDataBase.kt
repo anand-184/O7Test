@@ -12,8 +12,8 @@ abstract class BookingDatabase: RoomDatabase() {
     companion object {
         private var bookingDatabase: BookingDatabase? = null
         fun getInstance(context: Context): BookingDatabase {
-            if (BookingDatabase == null) {
-                BookingDatabase = Room.databaseBuilder(context, BookingDatabase::class.java, "BookingDatabase")
+            if (bookingDatabase == null) {
+                bookingDatabase = Room.databaseBuilder(context, BookingDatabase::class.java, "BookingDatabase")
                         .allowMainThreadQueries().build()
             }
             return bookingDatabase!!
