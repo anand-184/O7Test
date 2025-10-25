@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">O7 Test</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="travel_time">
+        <item>6:00 AM-10:00 AM</item>
+        <item>6:00 PM -9:00 PM</item>
+        <item>Off-Peak</item>
+
+
+
+    </string-array>
+    <string-array name="travel_class">
+        <item>Normal</item>
+        <item>AC</item>
+        <item>Sleeper</item>
+        <item>Luxury</item>
+
+    </string-array>
+</resources>
