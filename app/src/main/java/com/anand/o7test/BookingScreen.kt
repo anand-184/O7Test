@@ -125,15 +125,6 @@ class BookingScreen : Fragment() {
             totalFare += gst
 
 
-            displayFareBreakdown(
-                farePerTicket,
-                noOfTickets,
-                serviceFee,
-                gst,
-                totalFare,
-                isPeakHour,
-                age
-            )
 
             return totalFare
 
@@ -156,41 +147,6 @@ class BookingScreen : Fragment() {
         }
     }
 
-    private fun displayFareBreakdown(
-        farePerTicket: Double,
-        noOfTickets: Int,
-        serviceFee: Double,
-        gst: Double,
-        totalFare: Double,
-        isPeakHour: Boolean,
-        age: Int
-    ) {
-        val breakdown = StringBuilder()
-        breakdown.append("Fare Breakdown:\n\n")
-        breakdown.append("Fare per ticket: ₹${"%.2f".format(farePerTicket)}\n")
-        breakdown.append("Number of tickets: $noOfTickets\n")
-        breakdown.append("Subtotal: ₹${"%.2f".format(farePerTicket * noOfTickets)}\n")
-
-        if (isPeakHour) {
-            breakdown.append("Peak hour surcharge applied: +20%\n")
-        }
-
-        if (age < 12) {
-            breakdown.append("Child discount applied: -50%\n")
-        } else if (age >= 60) {
-            breakdown.append("Senior discount applied: -30%\n")
-        }
-
-        if (noOfTickets >= 5) {
-            breakdown.append("Group discount applied: -10%\n")
-        }
-
-        breakdown.append("Service fee: ₹${"%.2f".format(serviceFee)}\n")
-        breakdown.append("GST (5%): ₹${"%.2f".format(gst)}\n")
-        breakdown.append("\nTotal Fare: ₹${"%.2f".format(totalFare)}")
-
-        Toast.makeText(requireContext(), breakdown.toString(), Toast.LENGTH_LONG).show()
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
