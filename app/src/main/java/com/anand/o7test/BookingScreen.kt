@@ -147,8 +147,7 @@ class BookingScreen : Fragment() {
     }
 
     private fun isPeakHour(travelTime: String): Boolean {
-        // Define peak hours based on your travel_time array
-        // Adjust these values according to your actual spinner values
+
         return when (travelTime.lowercase()) {
             "morning (7am-10am)" -> true
             "evening (5pm-8pm)" -> true

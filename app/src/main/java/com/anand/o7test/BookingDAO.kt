@@ -6,8 +6,10 @@ import androidx.room.Query
 class BookingDAO {
     @Insert
     fun insertBooking(booking: Booking)
-    @Query("SELECT * FROM bookings")
+
+    @Query("SELECT * FROM booking")
     fun getAllBookings(): List<Booking>
+
 
 
 }

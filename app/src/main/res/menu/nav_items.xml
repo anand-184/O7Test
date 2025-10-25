@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Booking"
+        android:id="@+id/navScreen1"
+       />
+    <item android:title="Receipt"
+        android:id="@+id/navScreen2" />
+
+
+</menu>

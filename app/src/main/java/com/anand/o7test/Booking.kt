@@ -2,7 +2,7 @@ package com.anand.o7test
 
 import androidx.room.Entity
 
-@Entity(tableName = "bookings")
+@Entity(tableName = "booking")
 data class Booking(
     val passengerName: String,
     val age: Int,
