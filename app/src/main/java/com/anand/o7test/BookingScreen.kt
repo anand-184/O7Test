@@ -149,8 +149,8 @@ class BookingScreen : Fragment() {
     private fun isPeakHour(travelTime: String): Boolean {
 
         return when (travelTime.lowercase()) {
-            "morning (7am-10am)" -> true
-            "evening (5pm-8pm)" -> true
+            "morning (6am-10am)" -> true
+            "evening (6pm-9pm)" -> true
             "peak hours" -> true
             else -> false
         }
